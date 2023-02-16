@@ -134,24 +134,24 @@ function generateTags(){
 
     /* START LOOP: for each tag */
 
-   // for(let tag of articleTagsArray){
+    for(let tag of articleTagsArray){
       console.log(tag);
 
       /* generate HTML of the link */
 
-   //   const linkHTML = '<li><a href="#tag-' + tag +'">' + tag + '</a></li>';
-    //  console.log(linkHTML);
+      //   const linkHTML = '<li><a href="#tag-' + tag +'">' + tag + '</a></li>';
+      //  console.log(linkHTML);
 
       /* add generated code to html variable */
 
-   //   html = html + linkHTML;
+      //   html = html + linkHTML;
 
     /* END LOOP: for each tag */
     }
     /* insert HTML of all the links into the tags wrapper */
 
- //   tagsWrapper.innerHTML = html;
-   // console.log('tagsWrapper', tagsWrapper);
+    //   tagsWrapper.innerHTML = html;
+    // console.log('tagsWrapper', tagsWrapper);
 
   /* END LOOP: for every article: */
   }
