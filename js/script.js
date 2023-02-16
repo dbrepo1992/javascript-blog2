@@ -144,7 +144,7 @@ function generateTags(){
 
       /* add generated code to html variable */
 
-      //   html = html + linkHTML;
+      html = html + linkHTML;
 
     /* END LOOP: for each tag */
     }
