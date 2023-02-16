@@ -115,7 +115,7 @@ function generateTags(){
 
     /* find tags wrapper */
 
-  //  const tagsWrapper = article.querySelectorAll(optArticleTagsSelector);
+    const tagsWrapper = article.querySelectorAll(optArticleTagsSelector);
     console.log('tagswrapper', tagsWrapper);
 
     /* make html variable with empty string */
