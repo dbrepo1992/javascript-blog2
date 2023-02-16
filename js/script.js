@@ -120,7 +120,7 @@ function generateTags(){
 
     /* make html variable with empty string */
 
-   // let html = '';
+    let html = '';
 
     /* get tags from data-tags attribute */
 
