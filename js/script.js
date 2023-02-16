@@ -58,7 +58,13 @@ function generateTitleLinks(){
 
   /* remove contents of titleList */
 
+  const titleList = document.querySelector(optTitleListSelector);
+  titleList.innerHTML = '';
+  console.log(titleList);
+
   /* for each article */
+
+
 
   /* get the article id */
 
