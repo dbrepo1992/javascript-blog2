@@ -180,12 +180,18 @@ function tagClickHandler(event){
 
   /* find all tag links with class active */
 
+  const activeTagLinks = document.querySelectorAll('a[href="' + href + '"]');
+
   /* START LOOP: for each active tag link */
+
+  //for(let activeTagLink of activeTagLinks){
 
     /* remove class active */
 
-  /* END LOOP: for each active tag link */
+   // activeTagLink.classList.remove('active');
 
+  /* END LOOP: for each active tag link */
+  }
   /* find all tag links with "href" attribute equal to the "href" constant */
 
   /* START LOOP: for each found tag link */
@@ -195,7 +201,11 @@ function tagClickHandler(event){
   /* END LOOP: for each found tag link */
 
   /* execute function "generateTitleLinks" with article selector as argument */
+
+  generateTitleLinks('[data-tags~="' + tag + '"]');
+
 }
+
 
 
 function addClickListenersToTags(){
