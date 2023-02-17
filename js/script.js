@@ -62,7 +62,8 @@ const optArticleSelector = '.post',
 
   /* find all the articles and save them to variable: articles */
 
-  let articles = document.querySelectorAll(optArticleSelector);
+  let articles = document.querySelectorAll(optArticleSelector + customSelector);
+
 
   /* for each article */
 
