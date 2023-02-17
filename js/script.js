@@ -52,7 +52,7 @@ const optArticleSelector = '.post',
   optArticleTagsSelector = '.post-tags .list';
 
 
-function generateTitleLinks(){
+  function generateTitleLinks(customSelector = ''){
 
   /* remove contents of titleList */
 
