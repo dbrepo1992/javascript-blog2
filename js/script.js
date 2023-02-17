@@ -184,7 +184,7 @@ function tagClickHandler(event){
 
   /* START LOOP: for each active tag link */
 
-  //for(let activeTagLink of activeTagLinks){
+  for(let activeTagLink of activeTagLinks){
 
     /* remove class active */
 
