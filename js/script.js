@@ -198,10 +198,14 @@ function tagClickHandler(event){
 
   /* START LOOP: for each found tag link */
 
+  for(let tagLink of tagLinks){
+
     /* add class active */
 
-  /* END LOOP: for each found tag link */
+    tagLink.classList.add('active');
 
+  /* END LOOP: for each found tag link */
+  }
   /* execute function "generateTitleLinks" with article selector as argument */
 
   generateTitleLinks('[data-tags~="' + tag + '"]');
