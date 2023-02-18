@@ -107,7 +107,7 @@ generateTitleLinks();
 function generateTags(){
   /* find all articles */
 
-  let articles = document.querySelectorAll(optArticleSelector);
+  const articles = document.querySelectorAll(optArticleSelector);
 
   /* START LOOP: for every article: */
 
@@ -149,8 +149,9 @@ function generateTags(){
     /* END LOOP: for each tag */
     }
     /* insert HTML of all the links into the tags wrapper */
-
-    tagsWrapper.innerHTML = html;
+    for(let tagWrapper of tagsWrapper){
+      tagWrapper.innerHTML = html;
+    }
     console.log('tagsWrapper', tagsWrapper);
 
   /* END LOOP: for every article: */
@@ -216,11 +217,18 @@ function tagClickHandler(event){
 function addClickListenersToTags(){
   /* find all links to tags */
 
+  const linksToTags = document.querySelectorAll('a.active[href^="#tag-"]');
+
   /* START LOOP: for each link */
+
+  for(let linkToTags of linksToTags){
 
     /* add tagClickHandler as event listener for that link */
 
+    linkToTags.addEventListener('click', tagClickHandler);
+
   /* END LOOP: for each link */
+  }
 }
 
 addClickListenersToTags();
