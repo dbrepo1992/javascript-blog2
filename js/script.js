@@ -330,4 +330,9 @@ function authorClickHandler(event){
 
     activeAuthorLink.classList.remove('active');
   }
+
+  /* find all author links with "href" attribute equal to the "href" constant */
+
+  const authorLinks = document.querySelectorAll('a[href="' + href + '"]');
+
 }
