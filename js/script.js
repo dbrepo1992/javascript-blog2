@@ -306,4 +306,7 @@ function authorClickHandler(event){
 
   event.preventDefault();
 
+  /* make new constant named "clickedElement" and give it the value of "this" */
+
+  const clickedElement = this;
 }
