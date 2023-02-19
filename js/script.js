@@ -339,4 +339,9 @@ function authorClickHandler(event){
 
   for(let authorLink of authorLinks){
 
+    /* add class active */
+
+    authorLink.classList.add('active');
+  }
+
 }
