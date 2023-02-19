@@ -321,4 +321,8 @@ function authorClickHandler(event){
   /* find all author links with class active */
 
   const activeAuthorLinks = document.querySelectorAll('a[href="' + href + '"]');
+
+  /* START LOOP: for each active author link */
+
+  for(let activeAuthorLink of activeAuthorLinks){
 }
