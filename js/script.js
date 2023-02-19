@@ -263,6 +263,18 @@ function generatAuthors(){
 
     for(let author of articleAuthors){
       console.log(author);
+
+      /* generate HTML of the link */
+
+      const linkHTML = '<li><a href="#author-' + author +'">' + author + '</a></li>';
+      console.log(linkHTML);
+
+      /* add generated code to html variable */
+
+      html = html + linkHTML;
+
+    /* END LOOP: for each tag */
+    }
   }
 }
 
