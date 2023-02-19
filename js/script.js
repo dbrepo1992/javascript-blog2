@@ -286,6 +286,11 @@ function addClickListenersToAuthors(){
 
 const linksToAuthors = document.querySelectorAll('a.active[href^="#author-"]');
 
+/* START LOOP: for each link */
+
+for(let linkToAuthors of linksToAuthors){
+
+
 }
 addClickListenersToAuthors();
 
