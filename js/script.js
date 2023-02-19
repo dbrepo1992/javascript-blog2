@@ -245,6 +245,15 @@ function generatAuthors(){
 
     for(let article of articles){
 
+      /* find authors wrapper */
+
+    const authorsWrapper = article.querySelectorAll(optArticleAuthorSelector);
+    console.log('authorswrapper', authorsWrapper);
+
+    /* make html variable with empty string */
+
+    let html = '';
+
 }
 
 function addClickListenersToAuthors(){
