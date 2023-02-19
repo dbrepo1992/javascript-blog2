@@ -300,6 +300,10 @@ function addClickListenersToAuthors(){
 }
 addClickListenersToAuthors();
 
-function authorClickHandler(){
+function authorClickHandler(event){
+
+  /* prevent default action for this event */
+
+  event.preventDefault();
 
 }
