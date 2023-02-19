@@ -344,4 +344,8 @@ function authorClickHandler(event){
     authorLink.classList.add('active');
   }
 
+  /* execute function "generateTitleLinks" with article selector as argument */
+
+  generateTitleLinks('[data-author="' + author + '"]');
+
 }
