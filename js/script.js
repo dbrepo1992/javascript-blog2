@@ -313,4 +313,8 @@ function authorClickHandler(event){
   /* make a new constant "href" and read the attribute "href" of the clicked element */
 
   const href = clickedElement.querySelector('href');
+
+  /* make a new constant "author" and extract author from the "href" constant */
+
+  const author = href.replace('#author-', '');
 }
