@@ -325,4 +325,9 @@ function authorClickHandler(event){
   /* START LOOP: for each active author link */
 
   for(let activeAuthorLink of activeAuthorLinks){
+
+    /* remove class active */
+
+    activeAuthorLink.classList.remove('active');
+  }
 }
