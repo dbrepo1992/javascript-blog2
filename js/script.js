@@ -317,4 +317,8 @@ function authorClickHandler(event){
   /* make a new constant "author" and extract author from the "href" constant */
 
   const author = href.replace('#author-', '');
+
+  /* find all author links with class active */
+
+  const activeAuthorLinks = document.querySelectorAll('a[href="' + href + '"]');
 }
