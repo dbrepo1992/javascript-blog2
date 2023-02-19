@@ -256,27 +256,29 @@ function generatAuthors(){
 
     /* get authors from data-author attribute */
 
-    const articleAuthors = article.getAttribute('data-author');
-    console.log('articleAuthors', articleAuthors);
+    const author = article.getAttribute('data-author');
+    console.log('articleAuthors', author);
 
-    /* START LOOP: for each author */
+    /* generate HTML of the link */
 
-    for(let author of articleAuthors){
-      console.log(author);
+    const linkHTML = '<li><a href="#author-' + author +'">' + author + '</a></li>';
+    console.log(linkHTML);
 
-      /* generate HTML of the link */
+    /* add generated code to html variable */
 
-      const linkHTML = '<li><a href="#author-' + author +'">' + author + '</a></li>';
-      console.log(linkHTML);
-
-      /* add generated code to html variable */
-
-      html = html + linkHTML;
+    html = html + linkHTML;
 
     /* END LOOP: for each tag */
+
+    /* insert HTML of all the authors into the authors wrapper */
+    for(let authorWrapper of authorsWrapper){
+      authorWrapper.innerHTML = html;
     }
+    console.log('authorsWrapper', authorsWrapper);
   }
 }
+generatAuthors();
+
 
 function addClickListenersToAuthors(){
 
