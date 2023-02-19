@@ -237,6 +237,14 @@ addClickListenersToTags();
 
 function generatAuthors(){
 
+    /* find all articles */
+
+    const articles = document.querySelectorAll(optArticleSelector);
+
+    /* START LOOP: for every article: */
+
+    for(let article of articles){
+
 }
 
 function addClickListenersToAuthors(){
