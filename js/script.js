@@ -254,6 +254,12 @@ function generatAuthors(){
 
     let html = '';
 
+      /* get authors from data-author attribute */
+
+    const articleAuthors = article.getAttribute('data-author');
+    console.log('articleAuthors', articleAuthors);
+
+
 }
 
 function addClickListenersToAuthors(){
