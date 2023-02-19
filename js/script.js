@@ -237,15 +237,15 @@ addClickListenersToTags();
 
 function generatAuthors(){
 
-    /* find all articles */
+  /* find all articles */
 
-    const articles = document.querySelectorAll(optArticleSelector);
+  const articles = document.querySelectorAll(optArticleSelector);
 
-    /* START LOOP: for every article: */
+  /* START LOOP: for every article: */
 
-    for(let article of articles){
+  for(let article of articles){
 
-      /* find authors wrapper */
+    /* find authors wrapper */
 
     const authorsWrapper = article.querySelectorAll(optArticleAuthorSelector);
     console.log('authorswrapper', authorsWrapper);
@@ -254,12 +254,16 @@ function generatAuthors(){
 
     let html = '';
 
-      /* get authors from data-author attribute */
+    /* get authors from data-author attribute */
 
     const articleAuthors = article.getAttribute('data-author');
     console.log('articleAuthors', articleAuthors);
 
+    /* START LOOP: for each author */
 
+    for(let author of articleAuthors){
+      console.log(author);
+  }
 }
 
 function addClickListenersToAuthors(){
