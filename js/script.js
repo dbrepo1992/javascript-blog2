@@ -282,14 +282,20 @@ generatAuthors();
 
 function addClickListenersToAuthors(){
 
-/* find all links to authors */
+  /* find all links to authors */
 
-const linksToAuthors = document.querySelectorAll('a.active[href^="#author-"]');
+  const linksToAuthors = document.querySelectorAll('a.active[href^="#author-"]');
 
-/* START LOOP: for each link */
+  /* START LOOP: for each link */
 
-for(let linkToAuthors of linksToAuthors){
+  for(let linkToAuthors of linksToAuthors){
 
+    /* add authorClickHandler as event listener for that link */
+
+    linkToAuthors.addEventListener('click', authorClickHandler);
+
+  /* END LOOP: for each link */
+  }
 
 }
 addClickListenersToAuthors();
