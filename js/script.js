@@ -282,6 +282,10 @@ generatAuthors();
 
 function addClickListenersToAuthors(){
 
+/* find all links to authors */
+
+const linksToAuthors = document.querySelectorAll('a.active[href^="#author-"]');
+
 }
 addClickListenersToAuthors();
 
