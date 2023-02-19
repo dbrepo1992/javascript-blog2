@@ -335,4 +335,8 @@ function authorClickHandler(event){
 
   const authorLinks = document.querySelectorAll('a[href="' + href + '"]');
 
+  /* START LOOP: for each found author link */
+
+  for(let authorLink of authorLinks){
+
 }
