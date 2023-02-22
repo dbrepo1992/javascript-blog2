@@ -165,7 +165,10 @@ function generateTags(){
     }
     console.log('tagsWrapper', tagsWrapper);
 
-  /* END LOOP: for every article: */
+    /* END LOOP: for every article: */
+
+    /* [NEW] find list of tags in right column */
+    const tagList = document.querySelector(optTagsListSelector);
   }
 }
 generateTags();
