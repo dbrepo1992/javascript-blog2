@@ -153,10 +153,11 @@ function generateTags(){
       html = html + linkHTML;
 
       /* [NEW] check if this link is NOT already in allTags */
-      if(allTags.indexOf(linkHTML) == -1){
-        /* [NEW] add generated code to allTags array */
-        allTags.push(linkHTML);
+      if(!allTags[tag]) {
+        /* [NEW] add tag to allTags object */
+        allTags[tag] = 1;
       }
+
 
     /* END LOOP: for each tag */
     }
