@@ -90,6 +90,14 @@ function generateTitleLinks(customSelector = ''){
     console.log(linkHTML);
 
     /* insert link into titleList */
+
+    const innerHTML = document.querySelector('.titles');
+
+    innerHTML.insertAdjacentHTML('afterbegin', linkHTML);
+
+    console.log(innerHTML);
+
+    /* insert link into html variable */
     html = html + linkHTML;
     console.log('titlelist', html);
 
@@ -165,17 +173,26 @@ function generateTags(){
     /* insert HTML of all the links into the tags wrapper */
     for(let tagWrapper of tagsWrapper){
       tagWrapper.innerHTML = html;
+      console.log('links of tags', tagWrapper);
     }
-    console.log('tagsWrapper', tagsWrapper);
 
     /* END LOOP: for every article: */
   }
   /* [NEW] find list of tags in right column */
   const tagList = document.querySelector(optTagsListSelector);
 
-  /* [NEW] add html from allTags to tagList */
-  // tagList.innerHTML = allTags.join(' ');
-  console.log('alltags', allTags);
+  /* [NEW] create variable for all links HTML code */
+  let allTagsHTML = '';
+
+  /* [NEW] START LOOP: for each tag in allTags: */
+  for(let tag in allTags){
+  /* [NEW] generate code of a link and add it to allTagsHTML */
+    allTagsHTML += tag + ' (' + allTags[tag] + ') ';
+  }
+  /* [NEW] END LOOP: for each tag in allTags: */
+
+  /*[NEW] add HTML from allTagsHTML to tagList */
+  tagList.innerHTML = allTagsHTML;
 }
 generateTags();
 
@@ -191,7 +208,7 @@ function tagClickHandler(event){
 
   /* make a new constant "href" and read the attribute "href" of the clicked element */
 
-  const href = clickedElement.querySelector('href');
+  const href = clickedElement.getAttribute('href');
 
 
   /* make a new constant "tag" and extract tag from the "href" constant */
@@ -241,11 +258,11 @@ function addClickListenersToTags(){
 
   /* START LOOP: for each link */
 
-  for(let linkToTags of linksToTags){
+  for(let linkToTag of linksToTags){
 
     /* add tagClickHandler as event listener for that link */
 
-    linkToTags.addEventListener('click', tagClickHandler);
+    linkToTag.addEventListener('click', tagClickHandler);
 
   /* END LOOP: for each link */
   }
@@ -288,8 +305,6 @@ function generatAuthors(){
 
     html = html + linkHTML;
 
-    /* END LOOP: for each tag */
-
     /* insert HTML of all the authors into the authors wrapper */
     for(let authorWrapper of authorsWrapper){
       authorWrapper.innerHTML = html;
@@ -308,11 +323,11 @@ function addClickListenersToAuthors(){
 
   /* START LOOP: for each link */
 
-  for(let linkToAuthors of linksToAuthors){
+  for(let linkToAuthor of linksToAuthors){
 
     /* add authorClickHandler as event listener for that link */
 
-    linkToAuthors.addEventListener('click', authorClickHandler);
+    linkToAuthor.addEventListener('click', authorClickHandler);
 
   /* END LOOP: for each link */
   }
@@ -332,7 +347,7 @@ function authorClickHandler(event){
 
   /* make a new constant "href" and read the attribute "href" of the clicked element */
 
-  const href = clickedElement.querySelector('href');
+  const href = clickedElement.getAttribute('href');
 
   /* make a new constant "author" and extract author from the "href" constant */
 
