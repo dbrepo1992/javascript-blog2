@@ -2,8 +2,8 @@
 
 /* Variables */
 
-$color-light: #fff;
-$color-dark: #444;
+$color-light: snow;
+$color-dark: rgb(4, 84, 255) ;
 
 $font-logo: 'Sacramento', cursive;
 $font-header: 'Oswald', sans-serif;
@@ -34,6 +34,7 @@ body {
   text-transform: uppercase;
   font-family: $font-header;
   font-weight: 600;
+
   span {
     text-transform: none;
     font-weight: 400;
@@ -80,6 +81,7 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
+
   .active {
     font-weight: bold;
   }
@@ -103,6 +105,7 @@ body {
 
 .post {
   display: none;
+
   &.active {
     display: block;
   }
@@ -114,11 +117,26 @@ body {
 
 .post-tags {
   display: flex;
+
   p {
     margin: 0 10px 0 0;
   }
 }
 
-.post-tags a {
-  padding: 5px;
+.post-tags {
+  a {
+    padding: 5px;
+  }
+}
+/* Links */
+
+a {
+  text-decoration: none;
+  color: $color-dark;
+}
+
+a:hover {
+  font-weight: bold;
+  font-size: 18px;
+  transition: ease-in-out, 0.3s;
 }
